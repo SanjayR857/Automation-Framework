@@ -43,3 +43,4 @@ class AccountRegistrationPage():
             return  self.driver.find_element(By.XPATH,self.text_msg_conf_xpath).text
         except:
             None
+
