@@ -1,9 +1,9 @@
 import pytest
 
-from pageObjects.HomePage import HomePage
-from pageObjects.LoginPage import LoginPage
-from utilities.readProperties import ReadConfig
-from utilities.customLogger import LogGen
+from Pytest_Framewrok_UI_1.pageObjects.HomePage import HomePage
+from Pytest_Framewrok_UI_1.pageObjects.LoginPage import LoginPage
+from Pytest_Framewrok_UI_1.utilities.readProperties import ReadConfig
+from Pytest_Framewrok_UI_1.utilities.customLogger import LogGen
 import os
 
 class Test_Login():

@@ -1,11 +1,11 @@
 import pytest
 
-from pageObjects.HomePage import HomePage
-from pageObjects.AccountRegistrationPage import AccountRegistrationPage
-from utilities import randomeString
+from Pytest_Framewrok_UI_1.pageObjects.HomePage import HomePage
+from Pytest_Framewrok_UI_1.pageObjects.AccountRegistrationPage import AccountRegistrationPage
+from Pytest_Framewrok_UI_1.utilities import randomeString
 import os
-from utilities.readProperties import ReadConfig
-from utilities.customLogger import LogGen
+from Pytest_Framewrok_UI_1.utilities.readProperties import ReadConfig
+from Pytest_Framewrok_UI_1.utilities.customLogger import LogGen
 
 
 class Test_001_AccountReg:
@@ -29,7 +29,7 @@ class Test_001_AccountReg:
         self.regpage=AccountRegistrationPage(self.driver)
         self.regpage.setFirstName("John")
         self.regpage.setLastName("Canedy")
-        self.email=randomeString.random_string_generator()+'@gmail.com'
+        self.email= randomeString.random_string_generator() + '@gmail.com'
         self.regpage.setEmail(self.email)
         self.regpage.setTelephone("65656565")
         self.regpage.setPassword("abcxyz")

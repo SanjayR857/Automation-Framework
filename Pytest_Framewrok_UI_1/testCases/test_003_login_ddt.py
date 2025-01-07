@@ -1,11 +1,11 @@
 import time
 import pytest
-from pageObjects.HomePage import HomePage
-from pageObjects.LoginPage import LoginPage
-from pageObjects.MyAccountPage import MyAccountPage
-from utilities import XLUtils
-from utilities.readProperties import ReadConfig
-from utilities.customLogger import LogGen
+from Pytest_Framewrok_UI_1.pageObjects.HomePage import HomePage
+from Pytest_Framewrok_UI_1.pageObjects.LoginPage import LoginPage
+from Pytest_Framewrok_UI_1.pageObjects.MyAccountPage import MyAccountPage
+from Pytest_Framewrok_UI_1.utilities import XLUtils
+from Pytest_Framewrok_UI_1.utilities.readProperties import ReadConfig
+from Pytest_Framewrok_UI_1.utilities.customLogger import LogGen
 import os
 
 class Test_Login_DDT():
@@ -16,7 +16,7 @@ class Test_Login_DDT():
 
     def test_login_ddt(self,setup):
         self.logger.info("**** Starting test_003_login_Datadriven *******")
-        self.rows=XLUtils.getRowCount(self.path,'Sheet1')
+        self.rows= XLUtils.getRowCount(self.path, 'Sheet1')
         lst_status=[]
 
         self.driver = setup
@@ -31,7 +31,7 @@ class Test_Login_DDT():
             self.hp.clickMyAccount()
             self.hp.clickLogin()
 
-            self.email=XLUtils.readData(self.path,"Sheet1",r,1)
+            self.email= XLUtils.readData(self.path, "Sheet1", r, 1)
             self.password = XLUtils.readData(self.path, "Sheet1", r, 2)
             self.exp = XLUtils.readData(self.path, "Sheet1", r, 3)
             self.lp.setEmail(self.email)
